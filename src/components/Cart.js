@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { Component } from 'react';
-import CartResult from './Cart-Result';
-import CartItem from './Cart-Item';
+import CartResult from './CartResult';
+import CartItem from './CartItem';
 
 class Cart extends Component {
     render() {
