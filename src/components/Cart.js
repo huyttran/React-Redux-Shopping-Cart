@@ -1,7 +1,4 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { Component } from 'react';
-import CartResult from './CartResult';
-import CartItem from './CartItem';
 
 class Cart extends Component {
     render() {
@@ -12,19 +9,15 @@ class Cart extends Component {
                         <thead>
                             <tr>
                                 <th></th>
-                                <th>Sản Phẩm</th>
-                                <th>Giá</th>
-                                <th>Số Lượng</th>
-                                <th>Tổng Cộng</th>
+                                <th>Product Name</th>
+                                <th>Price</th>
+                                <th>Amount</th>
+                                <th>Total</th>
                                 <th></th>
                             </tr>
                         </thead>
                         <tbody>
-                            <CartItem />
-                            <CartItem />
-                            <CartItem />
-                            <CartItem />
-                            <CartResult />
+                            {this.props.children}
                         </tbody>
                     </table>
                 </div>

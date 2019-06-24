@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { Component } from 'react';
 
 class CartResult extends Component {
@@ -8,12 +7,12 @@ class CartResult extends Component {
                 <td colSpan="3"></td>
                 <td>
                     <h4>
-                        <strong>Tổng Tiền</strong>
+                        <strong>Total Price</strong>
                     </h4>
                 </td>
                 <td>
                     <h4>
-                        <strong>15$</strong>
+                        <strong>{this.calTotalAmount()} $</strong>
                     </h4>
                 </td>
                 <td colSpan="3">
@@ -23,6 +22,15 @@ class CartResult extends Component {
                 </td>
             </tr>
         );
+    }
+
+    calTotalAmount = () => {
+        const { cart } = this.props;
+        let result = 0;
+        cart.forEach(item => {
+            result += item.product.price * item.quantity;
+        });
+        return result;
     }
 }
 

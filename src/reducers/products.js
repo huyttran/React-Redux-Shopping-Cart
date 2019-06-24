@@ -1,4 +1,3 @@
-import * as types from '../constants/ActionType'
 import phoneImg from '../assets/Mobile-PNG-Clipart.png';
 const initalState = [
     {
@@ -8,7 +7,8 @@ const initalState = [
         description: 'Iphone',
         price: 555,
         inventory: 10,
-        rating: 3
+        rating: 3,
+        quantity: 1
     },
     {
         id: 1,
@@ -17,7 +17,8 @@ const initalState = [
         description: 'samsung',
         price: 333,
         inventory: 15,
-        rating: 5
+        rating: 5,
+        quantity: 1
     },
     {
         id: 2,
@@ -26,13 +27,12 @@ const initalState = [
         description: 'nokia',
         price: 250,
         inventory: 3,
-        rating: 2
+        rating: 2,
+        quantity: 1
     }
 ];
 const reducer = (state = initalState, action) => {
     switch (action.type) {
-        case types.SET_KEY_WORD:
-            return action;
         default: return state;
     }
 }

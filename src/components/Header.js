@@ -198,7 +198,7 @@ class Header extends Component {
                         <div className="breadcrumb-dn mr-auto">
                             <ol className="breadcrumb header-breadcrumb">
                                 <li className="breadcrumb-item">
-                                    <a>Trang Chủ</a>
+                                    <a>Home</a>
                                 </li>
                             </ol>
                         </div>
@@ -207,11 +207,11 @@ class Header extends Component {
                             <li className="nav-item dropdown">
                                 <a className="nav-link dropdown-toggle waves-effect waves-light" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true"
                                     aria-expanded="false">
-                                    <i className="fa fa-user"></i> Tài Khoản</a>
+                                    <i className="fa fa-user"></i> User</a>
                                 <div className="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
-                                    <a className="dropdown-item waves-effect waves-light">Đăng Ký</a>
-                                    <a className="dropdown-item waves-effect waves-light">Đăng Nhập</a>
-                                    <a className="dropdown-item waves-effect waves-light">Đăng Xuất</a>
+                                    <a className="dropdown-item waves-effect waves-light">Register</a>
+                                    <a className="dropdown-item waves-effect waves-light">Login</a>
+                                    <a className="dropdown-item waves-effect waves-light">Logout</a>
                                 </div>
                             </li>
                         </ul>

@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { Component } from 'react';
+import * as messages from '../constants/Message'
 
 class Product extends Component {
 	render() {
@@ -22,29 +23,21 @@ class Product extends Component {
 						</h4>
 						<ul className="rating">
 							{this.showRating(product.rating)}
-							{/* <li>
-                <i className="fa fa-star"></i>
-              </li>
-              <li>
-                <i className="fa fa-star"></i>
-              </li>
-              <li>
-                <i className="fa fa-star"></i>
-              </li>
-              <li>
-                <i className="fa fa-star"></i>
-              </li>
-              <li>
-                <i className="fa fa-star"></i>
-              </li> */}
 						</ul>
 						<p className="card-text">
-							Sản phẩm do {product.description} sản xuất
-            </p>
+							Lorem Ipsum is simply dummy text {product.description} Lorem Ipsum is simply dummy text
+           				</p>
 						<div className="card-footer">
 							<span className="left">{product.price} $</span>
 							<span className="right">
-								<a className="btn-floating blue-gradient" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add to Cart">
+								<a
+									className="btn-floating blue-gradient"
+									data-toggle="tooltip"
+									data-placement="top"
+									title=""
+									data-original-title="Add to Cart"
+									onClick={() => this.addToCart(product)}
+								>
 									<i className="fa fa-shopping-cart"></i>
 								</a>
 							</span>
@@ -53,6 +46,11 @@ class Product extends Component {
 				</div>
 			</div>
 		);
+	}
+	addToCart = (product) => {
+		const { addToCart, onChangeMessage } = this.props;
+		addToCart(product, 1);
+		onChangeMessage(messages.MSG_ADD_TO_CART_SUCCESS);
 	}
 
 	showRating = (rating) => {
